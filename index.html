@@ -1,0 +1,1015 @@
+<html>
+<head>
+<title>Yandex - Lesson2</title>
+<script src="js/jquery-3.2.0.js"></script>
+<script src="js/calendar_ru.js" type="text/javascript"></script>
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="calendar">
+	<center><form action="" id="schoolTimetable">
+		<p><big>Кликните на поле ввода даты для вызова календаря:</big><br>
+		с <input type="text" value="dd-mm-yyyy" onfocus="this.select();lcs(this)"
+			onclick="event.cancelBubble=true;this.select();lcs(this)" id="before">
+		по <input type="text" value="dd-mm-yyyy" onfocus="this.select();lcs(this)"
+			onclick="event.cancelBubble=true;this.select();lcs(this)" id="after">
+		<p><input type="checkbox" id="show" value="Показывать прошедшие лекции">Показывать прошедшие лекции</p>
+			<font id="submit">Применить</font>
+		</p>
+	</form></center>
+</div>
+<div class="tabs">
+    <input id="tab1" class="tabs" type="radio" name="tabs" checked>
+    <label for="tab1" id="tab11" title="Школа разработки интерфейсов"><img id="tab111" src="./img/1.png"/><span>Школа разработки интерфейсов</span></label>
+ 
+    <input id="tab2" class="tabs" type="radio" name="tabs">
+    <label for="tab2" id="tab22" title="Школа мобильной разработки"><img id="tab222" src="./img/2.png"/><span>Школа мобильной разработки</span></label>
+ 
+    <input id="tab3" class="tabs" type="radio" name="tabs">
+    <label for="tab3" id="tab33" title="Школа мобильного дизайна"><img id="tab333" src="./img/3.png"/><span>Школа мобильного дизайна</span></label>
+ 
+    <!--<input id="tab4" class="tabs" type="radio" name="tabs">
+    <label for="tab4" id="tab44" title="Общее расписание"><img id="tab444" src="./img/all2.png"/><span>Общее расписание школ</span></label>-->
+ 
+    <section id="content-tab1">
+		<p>
+          <center>
+		  <h1>Школа разработки интерфейсов</h1>
+		  <h3>Количество человек:<span class="numbers">25</span></h3>
+		  <h3>Доклады</h3>
+		  <div class="error">
+		  </div>
+		  <font class="addnew">Добавить новую лекцию</font>
+			  <table width="100%" cellpadding="8" cellspacing="0" class="tablefilter">
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4162/">Лекция 1. Адаптивная вёрстка</a></td>
+				<td width="20%" class="author edit" data-title="Кандидат технических наук, научный сотрудник ИПУ РАН с 2008 по 2013. Пришёл в Яндекс.Картинки в 2014 году, отвечал за мобильную версию и рост производительности сервиса. В 2016 перешёл в Yandex Data Factory, где разрабатывает интерфейсы и дизайн веб-приложений для B2B.">Дмитрий Душкин</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">13:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4162/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4172/">Лекция 2. Работа с сенсорным пользовательским вводом</a></td>
+				<td width="20%" class="author edit" data-title="Кандидат технических наук, научный сотрудник ИПУ РАН с 2008 по 2013. Пришёл в Яндекс.Картинки в 2014 году, отвечал за мобильную версию и рост производительности сервиса. В 2016 перешёл в Yandex Data Factory, где разрабатывает интерфейсы и дизайн веб-приложений для B2B.">Дмитрий Душкин</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">14:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4162/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4197/">Лекция 3. Мультимедиа: возможности браузера</a></td>
+				<td width="20%" class="author edit" data-title="Во фронтенд-разработке с 2007 года. До 2013-го, когда пришёл в Яндекс, работал технологом в студии Лебедева и других компаниях.">Максим Васильев</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">15:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4197/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4230/">Лекция 4. Нативные приложения на веб-технологиях</a></td>
+				<td width="20%" class="author edit" data-title="Веб-разработчик в Яндексе с 2005 года. Успел поработать над Поиском, Почтой, Поиском по блогам, Я.ру, Картинками, Видео. Помимо этого, активно занимается развитием внутренних инструментов для создания сайтов.">Сергей Бережной</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">16:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4230/">Смотреть</a></td>
+			  </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4292/">Лекция 5. Клиентская оптимизация: базовые знания и лучшие практики</a></td>
+				<td width="20%" class="author edit" data-title="Окончил радиофизический факультет Киевского Национального Университета. Автор трёх патентных заявок. В Яндексе с 2014 года, разрабатывает интерфейсы Яндекс.Карт.">Андрей Морозов</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">17:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4292/">Смотреть</a></td>
+			  </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4307/">Лекция 6. Клиентская оптимизация: мобильные устройства и инструменты</a></td>
+				<td width="20%" class="author edit" data-title="Окончил факультет ВМК (вычислительной математики и кибернетики) МГУ им. М.В. Ломоносова, занимается веб-программированием с 2007 года. Сначала делал админки для системы фильтрации трафика, затем — интерфейсы онлайн-карт для проекта Космоснимки. В Яндексе начинал с Народа и Я.ру, последние два года занимался главной страницей. В настоящее время специализируется на вопросах производительности: от серверного JS до оптимизации загрузки страницы на клиенте.">Иван Карев</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">18:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4307/">Смотреть</a></td>
+			  </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4323/">Лекция 7. Инфраструктура веб-проектов</a></td>
+				<td width="20%" class="author edit" data-title="В 2008 году впечатлился веб-разработкой из-за скорости воплощения идей и лёгкость их донесения до пользователей. В Яндексе с 2014 года, разрабатывает страницу поисковой выдачи. Любит сложные задачи, интересуется аналитикой, тестированием и новыми способами автоматизировать рутину.">Прокопюк Андрей</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">19:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4323/">Смотреть</a></td>
+			  </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4324/">Лекция 8. Инструменты разработки мобильного фронтенда</a></td>
+				<td width="20%" class="author edit" data-title="В 2008 году впечатлился веб-разработкой из-за скорости воплощения идей и лёгкость их донесения до пользователей. В Яндексе с 2014 года, разрабатывает страницу поисковой выдачи. Любит сложные задачи, интересуется аналитикой, тестированием и новыми способами автоматизировать рутину.">Прокопюк Андрей</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">20:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4324/">Смотреть</a></td>
+			  </tr>
+			  <tr class="tablerow">
+				<td width="25%" class="edit">Общая лекция 1</td>
+				<td width="20%" class="author edit" data-title="Работал дизайнером в студии «Трансформер», с 2014 года — дизайнер систем идентификации в Яндексе.">Дмитрий Моруз</td>
+				<td width="10%" class="edit date">20.07.2017</td><td width="10%" class="edit time">13:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit"></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit">Общая лекция 2</td>
+				<td width="20%" class="author edit" data-title="Работал дизайнером в студии «Трансформер», с 2014 года — дизайнер систем идентификации в Яндексе.">Дмитрий Моруз</td>
+				<td width="10%" class="edit date">21.07.2017</td><td width="10%" class="edit time">14:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit"></td>
+			   </tr>
+			 </table>
+		  </center>
+        </p>
+    </section>  
+    <section id="content-tab2">
+		<p>
+          <center>
+		  <h1>Школа мобильной разработки</h1>
+		  <h3>Количество человек:<span class="numbers">17</span></h3>
+		  <h3>Доклады</h3>
+		  <div class="error">
+		  </div>
+		  <font class="addnew">Добавить новую лекцию</font>
+			  <table width="100%" cellpadding="8" cellspacing="0" class="tablefilter">
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/people/3768719/">	Лекция 1. Java Blitz (Часть 1)</a></td>
+				<td width="20%" class="author edit" data-title="О языке программирования Java и устройстве виртуальной машины Dalvik/ART на Android. А также об отличиях среды мобильной разработки от десктопной Java и о том, что важно знать при знакомстве с экосистемой Android.">Эдуард Мацуков</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">13:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/people/3768719/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4161/">	Лекция 2. Git & Workflow</a></td>
+				<td width="20%" class="author edit" data-title="Окончил факультет ИТ Московского Технического Университета. В Яндексе с 2015 года, разрабатывает приложение Auto.ru для Android.">Дмитрий Складнов</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">14:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4161/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4162/">Лекция 3. Java Blitz (Часть 2)</a></td>
+				<td width="20%" class="author edit" data-title="О языке программирования Java и устройстве виртуальной машины Dalvik/ART на Android. А также об отличиях среды мобильной разработки от десктопной Java и о том, что важно знать при знакомстве с экосистемой Android.">Эдуард Мацуков</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">15:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4162/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4169/">MyFirstApp (Часть 1)</a></td>
+				<td width="20%" class="author edit" data-title="Окончил Самарский университет. Разрабатывает приложения для Android с 2010 года. В Яндексе — с 2012-го. Руководит разработкой мобильных клиентов Яндекс.Диска.">Роман Григорьев</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">16:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4169/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4195/">Лекция 5. MyFirstApp (Часть 2)</a></td>
+				<td width="20%" class="author edit" data-title="Окончил Самарский университет. Разрабатывает приложения для Android с 2010 года. В Яндексе — с 2012-го. Руководит разработкой мобильных клиентов Яндекс.Диска.">Роман Григорьев</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">17:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4195/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4196/">	Лекция 6. ViewGroup</a></td>
+				<td width="20%" class="author edit" data-title="Профессионал с глубокими познаниями в графической части Android и всего, что с ней связано. Любит нестандартные задачи и решает их в команде мобильного Яндекс Браузера.">Алексей Щербинин</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">18:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4196/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4222/">Лекция 7. Background</a></td>
+				<td width="20%" class="author edit" data-title="Выпускник Московского Института Электронной Техники. Android- и Python-разработчик. В команде мобильного Яндекс.Браузера с 2015 года.">Алексей Макаров</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">19:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4222/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4223/">Лекция 8. RecyclerView</a></td>
+				<td width="20%" class="author edit" data-title="Энтузиаст разработки под Android, в Яндексе занимается оптимизацией и разработкой мобильного приложения Карт.">Владимир Тагаков</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">20:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4223/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4275/">	Лекция 9. Service & Broadcasts</a></td>
+				<td width="20%" class="author edit" data-title="Выпускник Московского Института Электронной Техники. Android- и Python-разработчик. В команде мобильного Яндекс.Браузера с 2015 года.">Алексей Макаров</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">21:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4275/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4276/">Лекция 10. Drawing</a></td>
+				<td width="20%" class="author edit" data-title="Профессионал с глубокими познаниями в графической части Android и всего, что с ней связано. Любит нестандартные задачи и решает их в команде мобильного Яндекс Браузера.">Алексей Шербинин</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">22:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4276/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4296/">Лекция 11. Content provider</a></td>
+				<td width="20%" class="author edit" data-title="Учится в магистратуре на факультете информатики и вычислительной техники Московского института радиотехники, электроники и автоматики. С 2005 года занимается разработкой приложений (игры, бизнес-приложения) для мобильных устройств на платформах J2ME, Windows Mobile, Android, Symbian, участвовал в разработке веб-приложений на Java EE. В Яндексе с 2010 года, занимается разработкой для мобильных устройств на платформах J2ME и Android.">Максим Хромцов</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">13:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4296/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4297/">Лекция 12. SQL&SQLite</a></td>
+				<td width="20%" class="edit"> </td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">14:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td><td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4297/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4320/">Лекция 13. Fragments (Часть 1)</a></td>
+				<td width="20%" class="author edit" data-title="Окончил факультет ВМК МГУ им. Ломоносова. Занимается разработкой приложений и игр с 2011 года, в 2012-м сконцентрировался на мобильных платформах Android и iOS. В Яндексе разрабатывает приложения для Android.">Денис Загаевский</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">15:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4320/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4321/">Лекция 14. Fragments (Часть 2)</a></td>
+				<td width="20%" class="author edit" data-title="Окончил факультет ВМК МГУ им. Ломоносова. Занимается разработкой приложений и игр с 2011 года, в 2012-м сконцентрировался на мобильных платформах Android и iOS. В Яндексе разрабатывает приложения для Android.">Денис Загаевский</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">16:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4321/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4346/">Лекция 15. MVP&Co</a></td>
+				<td width="20%" class="author edit" data-title="Окончил факультет ПМТ Вятского государственного университета в 2012 году. В Яндексе с 2015-го, занимается разработкой продуктов медийных сервисов.">Дмитрий Попов</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">17:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4346/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4352/">Лекция 16. Debugging & Polishing</a></td>
+				<td width="20%" class="author edit" data-title="Разрабатывает приложения под мобильные платформы с 2009 года. За это время принял участие более чем в 30 законченных проектах под Android, iOS, и Windows Phone. В Яндексе с 2015 года, занимается разработкой КиноПоиска под Android и iOS.">Дмитрий Душкин</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">16:40</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4352/">Смотреть</a></td>
+			   </tr>
+			  <tr class="tablerow">
+				<td width="25%" class="edit">Общая лекция 1</td>
+				<td width="20%" class="author edit" data-title="Работал дизайнером в студии «Трансформер», с 2014 года — дизайнер систем идентификации в Яндексе.">Дмитрий Моруз</td>
+				<td width="10%" class="edit date">20.07.2017</td><td width="10%" class="edit time">18:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit"></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit">Общая лекция 2</td>
+				<td width="20%" class="author edit" data-title="Работал дизайнером в студии «Трансформер», с 2014 года — дизайнер систем идентификации в Яндексе.">Дмитрий Моруз</td>
+				<td width="10%" class="edit date">21.07.2017</td><td width="10%" class="edit time">19:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit"></td>
+			   </tr>
+			 </table>
+			 </center>
+        </p>
+    </section> 
+    <section id="content-tab3">
+		<p>
+          <center><h1>Школа мобильного дизайна</h1>
+		  <h3>Количество человек:<span class="numbers">33</span></h3>
+		  <h3>Доклады</h3>
+		  <div class="error">
+		  </div>
+		  <font class="addnew">Добавить новую лекцию</font>
+			  <table width="100%" cellpadding="8" cellspacing="0" class="tablefilter">
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4158/">Лекция 1. Идея, исследование, концепт (Часть 1)</a></td>
+				<td width="20%" class="author edit" data-title="В Яндексе с 2014 года. Ведущий дизайнер продукта в сервисах Переводчик, Расписания и Видео.">Антон Тен</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">12:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4158/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4159/">Лекция 2. Идея, исследование, концепт (Часть 2)</a></td>
+				<td width="20%" class="author edit" data-title="В Яндексе с 2014 года. Ведущий дизайнер продукта в сервисах Переводчик, Расписания и Видео.">Антон Тен</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">13:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4159/">Смотреть</a></td>
+			   </tr>			  
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4167/">Лекция 3. Особенности проектирования мобильных интерфейсов</a></td>
+				<td width="20%" class="author edit" data-title="Пришёл в Яндекс в 2014 году. Дизайнер продукта в музыкальных сервисах компании, участник команды разработки Яндекс.Радио.">Николай Васютин</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">14:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4167/">Смотреть</a></td>
+			   </tr>			   
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4189/">Лекция 4. Продукт и платформа</a></td>
+				<td width="20%" class="author edit" data-title="Пришёл в компанию дизайнером мобильных приложений в 2013-м. Три года занимался музыкальными сервисами Яндекса, сейчас руководит дизайном турецкого направления. Считает что дизайнера должна отличать любовь к людям.">Сергей Калабин</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">15:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4189/">Смотреть</a></td>
+			   </tr>			   
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4190/">Лекция 5. Природа операционных систем</a></td>
+				<td width="20%" class="author edit" data-title="Пришёл в Яндекс в 2014 году. Дизайнер продукта в музыкальных сервисах компании, участник команды разработки Яндекс.Радио.">Николай Васюнин</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">16:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4190/">Смотреть</a></td>
+			   </tr>			   
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4267/">Лекция 6. Прототипирование как процесс</a></td>
+				<td width="20%" class="author edit" data-title="Серёжа: Профессионально занимается дизайном с 2009 года. В 2010 году переключился на работу исключительно над интерфейсами, по большей части мобильными. В Яндекс пришёл в 2011 году. Участвовал в создании разных продуктов Поиска, Диска, Фоток и Музыки для всех популярных платформ.">Сергей Томилов</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">17:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4267/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"></td>
+				<td width="20%" class="author edit" data-title="Дизайнер мобильных продуктов. До прихода в компанию занималась интерфейсами мобильных игр. В Яндексе делает Браузер под все платформы. Также успела поработать над экспериментальными голосовыми интерфейсами и мобильной версией главной страницы Яндекса.">Дарья Старицына</td>
+				<td width="10%" class="edit"></td>
+				<td width="20%" class="edit"></td>
+				<td width="10%" class="edit"></td>
+			   </tr>			   
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4268/">Лекция 7. Инструмент под задачи</a></td>
+				<td width="20%" class="author edit" data-title="Серёжа: Профессионально занимается дизайном с 2009 года. В 2010 году переключился на работу исключительно над интерфейсами, по большей части мобильными. В Яндекс пришёл в 2011 году. Участвовал в создании разных продуктов Поиска, Диска, Фоток и Музыки для всех популярных платформ.">Сергей Томилов</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">18:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4268/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"></td>
+				<td width="20%" class="author edit" data-title="Дизайнер мобильных продуктов. До прихода в компанию занималась интерфейсами мобильных игр. В Яндексе делает Браузер под все платформы. Также успела поработать над экспериментальными голосовыми интерфейсами и мобильной версией главной страницы Яндекса.">Дарья Старицына</td>
+				<td width="10%" class="edit"></td>
+				<td width="20%" class="edit"></td>
+				<td width="10%" class="edit"></td>
+			   </tr>			   
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4266/">Лекция 8. Анимации</a></td>
+				<td width="20%" class="author edit" data-title="Серёжа: Профессионально занимается дизайном с 2009 года. В 2010 году переключился на работу исключительно над интерфейсами, по большей части мобильными. В Яндекс пришёл в 2011 году. Участвовал в создании разных продуктов Поиска, Диска, Фоток и Музыки для всех популярных платформ.">Сергей Томилов</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">19:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4266/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"></td>
+				<td width="20%" class="author edit" data-title="Дизайнер мобильных продуктов. До прихода в компанию занималась интерфейсами мобильных игр. В Яндексе делает Браузер под все платформы. Также успела поработать над экспериментальными голосовыми интерфейсами и мобильной версией главной страницы Яндекса.">Дарья Старицына</td>
+				<td width="10%" class="edit"></td>
+				<td width="20%" class="edit"></td>
+				<td width="10%" class="edit"></td>
+			   </tr>			   
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4269/">Дополнительная лекция. Design Everything</a></td>
+				<td width="20%" class="author edit" data-title="Krijn Rijshouwer is a product designer. “I like to create and work on products that have a positive impact in the world. The thing that attracts me most in doing what I do at Framer, and did before at other companies, is changing the way a lot of people work, live and consume on a daily basis with just the push of a button.">Rijshouwer Krijn</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">20:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4269/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"></td>
+				<td width="20%" class="author edit" data-title="Jonas Treub is a software developer. “I am a creative software developer with experience working on a variety of projects, from small prototypes to large apps for some well-known Dutch clients.”">Treub Jonas</td>
+				<td width="10%" class="edit"></td>
+				<td width="20%" class="edit"></td>
+				<td width="10%" class="edit"></td>
+			   </tr>			   
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4295/">Лекция 9. Развитие продукта</a></td>
+				<td width="20%" class="author edit" data-title="В конце 2013 года команда сервиса Яндекс.Музыка начала разработку новой версии. Новой получилась не только «шкурка», то есть дизайн, но и сами возможности. Мы переосмыслили поведение пользователей на сайте и в приложении и иначе оценили потребность людей в новой музыке. В результате этого получилась нынешняя версия music.yandex.ru и её мобильные клиенты. В докладе я расскажу о том, как шёл процесс переосмысления, почему мы сделали именно так, как сделали, и что из этого всего вышло.">Андрей Гевак</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">21:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4295/">Смотреть</a></td>
+			   </tr>			   
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4319/">Лекция 10. Исследование интерфейсов</a></td>
+				<td width="20%" class="author edit" data-title="Занимается исследованиями интерфейсов в Яндексе больше 5 лет. За это время поработал с десятками продуктов Поиска, Карт, Маркета, Почты и других сервисов компании. Заинтересовался интерфейсами в 2005 году, по образованию специалист по защите информации.">Александр Кондратьев</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">22:00</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4319/">Смотреть</a></td>
+			   </tr>			   
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4345/">Лекция 11. Работа в команде)</a></td>
+				<td width="20%" class="author edit" data-title="Руководитель службы разработки мобильных геоинформационных сервисов «Яндекса». Работает над «Яндекс.Картами» и «Яндекс.Метро». Занимается мобильной разработкой более восьми лет.">Юрий Подорожный</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">13:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4345/">Смотреть</a></td>
+			   </tr>			   
+			   <tr class="tablerow">
+				<td width="25%" class="edit"><a href="https://events.yandex.ru/lib/talks/4349/">Дополнительная лекция. Айдентика</a></td>
+				<td width="20%" class="author edit" data-title="Работал дизайнером в студии «Трансформер», с 2014 года — дизайнер систем идентификации в Яндексе.">Дмитрий Моруз</td>
+				<td width="10%" class="edit date">Прошла</td><td width="10%" class="edit time">12:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit link"><a href="https://events.yandex.ru/lib/talks/4349/">Смотреть</a></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit"></td>
+				<td width="20%" class="author edit" data-title="Арт-директор коммуникаций Яндекса. В прошлом — арт-директор журналов «CitizenK», «Эрмитаж», «Секрет Фирмы», «Top-Flight», сотрудник «Мастерской Димы Барбанеля». Занимался макетной работой для компаний Readymag, Aliexpress, ONY, Charmer, MINI, Grohe и Мосметрострой.">Ждан Филиппов</td>
+				<td width="10%" class="edit"></td>
+				<td width="20%" class="edit"></td>
+				<td width="10%" class="edit"></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit">Общая лекция 1</td>
+				<td width="20%" class="author edit" data-title="Работал дизайнером в студии «Трансформер», с 2014 года — дизайнер систем идентификации в Яндексе.">Дмитрий Моруз</td>
+				<td width="10%" class="edit date">20.07.2017</td><td width="10%" class="edit time">15:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit"></td>
+			   </tr>
+			   <tr class="tablerow">
+				<td width="25%" class="edit">Общая лекция 2</td>
+				<td width="20%" class="author edit" data-title="Работал дизайнером в студии «Трансформер», с 2014 года — дизайнер систем идентификации в Яндексе.">Дмитрий Моруз</td>
+				<td width="10%" class="edit date">21.07.2017</td><td width="10%" class="edit time">16:30</td>
+				<td width="15%" class="edit">ул. Льва Толстого, 16</td>
+				<td width="10%" class="cabinet" data-title="Номер кабинета - вместимость человек">
+					<select class="my_select" name="my_select">			
+						<option value="1">1к-72ч.</option>
+						<option value="2">2к-34ч.</option>
+						<option value="3">3к-31ч.</option>
+						<option value="4">4к-38ч.</option>
+						<option value="5">5к-53ч.</option>
+						<option value="6">6к-23ч.</option>
+						<option value="7">7к-29ч.</option>
+						<option value="8">8к-23ч.</option>
+						<option value="9">9к-18ч.</option>
+						<option value="10">10к-71ч.</option>
+					</select>
+				</td>
+				<td width="10%" class="edit"></td>
+			   </tr>
+			 </table>
+			 </center>
+        </p>
+    </section>  
+</div>
+<script src="js/lib.js"></script>
+</body>
+</html>

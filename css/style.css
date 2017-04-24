@@ -1,0 +1,252 @@
+body{
+	font-family: Arial, sans-serif;
+}
+table{
+	box-shadow: 0 0 1px rgba(0,0,0,0.5);
+	margin-top:6px;
+	z-index:1;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+table:hover{
+	cursor:default;
+}
+#filter{
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	padding-bottom: 1.5em;
+	border-radius:10px;
+	width:30%;
+	padding:10px;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+.modal-inner{
+	position: absolute;
+	display: none;
+	top: 30%;
+	left: 30%;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,.4);
+	width: 200px;
+	padding: 10px;
+}
+.tabs span{
+	line-height:20px;
+}
+.tabs img{
+	position:relative;
+	top:5px;
+	right:4px;
+}
+#my_select{
+	width:100%;
+}
+#submit{
+	border:2px solid black;
+	border-radius:7px;
+	padding:2px;
+	cursor:pointer;
+	background:#C0C0C0;
+	padding-left:10px;
+	padding-right:10px;
+	opacity:0.7;
+}
+#submit:hover{
+	opacity:1;
+}
+#calendar{
+	min-width:320px;
+	padding:0px;
+	margin:0 auto;
+}
+
+.tabs {
+	min-width: 320px;
+	max-width: 900px;
+	padding: 0px;
+	margin: 0 auto;
+}
+.tabs>section {
+	display: none;
+	padding: 15px;
+	background: #fff;
+	border: 1px solid #ddd;
+	background:#edeef0;
+	width:100%;
+}
+.tabs>section>p {
+	margin: 0 0 5px;
+	line-height: 1.5;
+	color: #383838;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+table a{
+	text-decoration:none;
+}
+.link a{
+	color:black;
+	border:0.5px solid #b6a8a8;
+	background:#FFFFFF;
+	cursor:pointer;
+	padding:3px;
+	border-radius:3px;
+}
+.author:hover{
+	cursor:pointer;
+	color:blue;
+}
+.author:hover:after {
+    content: attr(data-title);
+    position: absolute;
+	z-index: 1;
+    background: rgba(0,42,167,0.8);
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+	border-radius:3px;
+}
+.cabinet:hover:after {
+    content: attr(data-title);
+    position: absolute;
+	z-index: 1;
+    background: rgba(0,42,167,0.8);
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+	border-radius:3px;
+}
+h1{
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+h3{
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+#edit{
+	width:100%;
+}
+.error{
+	color:red;
+	font-weight:bold;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+.cabinet{
+	min-width:70px;
+}
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.addnew{
+	border:1px solid #8b8888;
+	border-radius:4px;
+	padding:3px;
+	cursor:pointer;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+.tabs>input {
+	display: none;
+	position: absolute;
+}
+.tabs>label {
+	display: inline-block;
+	margin: 0 0 -1px;
+	padding: 10px 15px;
+	font-weight: 600;
+	text-align: center;
+	color: #aaa;
+	border: 0px solid #ddd;
+	border-width: 1px 1px 1px 1px;
+	background: #fffdfd;
+	border-radius: 3px 3px 0 0;
+	max-width:21%;
+}
+.tabs>label:before {
+	font-family: fontawesome;
+	font-weight: normal;
+	margin-right: 10px;
+}
+.tabs>label:hover {
+	color: #888;
+	cursor: pointer;
+}
+.tabs>input:checked+label {
+	color: #555;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #edeef0;
+	background:#edeef0;
+}
+#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
+	display: inline-block;
+}
+ 
+@media screen and (max-width: 900px) {
+	.tabs>label {
+		font-size: 0;
+	}
+	.tabs>label:before {
+		margin: 0;
+		font-size: 18px;
+	}
+	.tabs img{
+		right:0px;
+	}
+	#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
+		overflow: scroll;
+	}
+}
+@media screen and (max-width: 400px) {
+	.tabs>label {
+		padding: 10px;
+	}
+}
